@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: homework_rick_and_morty
+  jpa:
+    hibernate:
+      jdbc:
+        lob:
+          non_contextual_creation: true
+      ddl-auto: update
+    show-sql: true
+url:
+  CHARACTER_API: "https://rickandmortyapi.com/api/character"

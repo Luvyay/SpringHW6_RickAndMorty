@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<div class="header">
+    <div class="menu">
+        <ul>
+            <li><a href="https://rickandmortyapi.com/">Официальный сайт Api</a></li>
+            <li><a th:href="@{/web/characters}">Главная</a></li>
+        </ul>
+    </div>
+    <div class="info_block">
+        <h1>The Rick and Morty Cards:</h1>
+    </div>
+</div>
+<div class="content">
+    <div class="wrapper_character">
+        <div class="character_image">
+            <img th:src="${character.image}" th:alt="${character.name}">
+        </div>
+        <div class="character_info">
+            <div class="section">
+                <h2 class="character_name" th:text="${character.name}"></h2>
+                <span class="status_icon" th:if="${character.status == 'Alive'}" th:style="'background: rgb(85, 204, 68)'"></span>
+                <span class="status_icon" th:unless="${character.status == 'Alive'}" th:style="'background: rgb(255,25,25)'"></span>
+                <span class="text_white" th:text="|${character.status} - ${character.species}|"></span>
+            </div>
+            <div class="section">
+                <span class="text_gray">Gender:</span><br>
+                <span class="text_white" th:text="${character.gender}"></span>
+            </div>
+            <div class="section">
+                <span class="text_gray">Origin:</span><br>
+                <span class="text_white" th:text="${character.origin.name}"></span><br>
+                <span class="text_gray">Last known location:</span><br>
+                <span class="text_white" th:text="${character.location.name}"></span>
+            </div>
+            <div class="section">
+                <span class="text_gray">List of episodes in which this character appeared:</span><br>
+                <div th:each="episode : ${episodes}">
+                    <span class="text_white" th:utext="|The id of the episode: <b style='color: orange'>${episode.id}</b>|"></span><br>
+                    <span class="text_white" th:utext="|The name of the episode: <b style='color: orange'>${episode.name}</b>|"></span><br>
+                    <span class="text_white" th:utext="|The air date of the episode: <b style='color: orange'>${episode.air_date}</b>|"></span><br>
+                    <span class="text_white" th:utext="|The code of the episode: <b style='color: orange'>${episode.episode}</b>|"></span><br>
+                    <hr class="episode_separator">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <ul>
+        <li>
+            <a href="https://github.com/Luvyay?tab=repositories">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+                    </path>
+                </svg>
+                <span>GitHub</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

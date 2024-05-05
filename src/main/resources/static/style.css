@@ -1,0 +1,332 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+-----------------------------------
+Блок с настройками стилей header
+*/
+
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+    /*
+    -----------------------------------
+    Блок с настройками стилей menu
+    */
+    .menu {
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        background: rgb(60, 62, 68);
+    }
+
+    .menu ul {
+        width: 350px;
+        height: 50px;
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        line-height: 50px;
+    }
+
+    .menu ul li {
+        display: inline-block;
+        margin-right: 35px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .menu ul li a, .menu ul li a:hover {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    /*
+    Конец блока с настройками стилей menu
+    -----------------------------------
+    */
+
+    /*
+    -----------------------------------
+    Блок с настройками стилей info_block
+    */
+
+    .info_block {
+        height: 376px;
+        line-height: 376px;
+    }
+
+    .info_block h1 {
+        padding: 0;
+        margin: 0;
+        font-size: 5.625rem;
+        text-align: center;
+    }
+
+    /*
+    Конец блока с настройками стилей info_block
+    -----------------------------------
+    */
+
+/*
+Конец блока с настройками стилей header
+-----------------------------------
+*/
+
+/*
+-----------------------------------
+Блок с настройками стилей content
+*/
+
+.content {
+    background: rgb(39, 43, 51);
+    margin: 0 auto;
+    padding: 81px 0px;
+    /*display: flex;*/
+}
+
+    /*
+    -----------------------------------
+    Блок с настройками стилей wrapper
+    */
+
+    .wrapper {
+        margin: 0 auto;
+        width: 1300px;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1920px;
+    }
+
+        /*
+        -----------------------------------
+        Блок с настройками стилей section_card
+        */
+
+        .section_card {
+            margin: 12px;
+            width: 600px;
+            height: 220px;
+            display: flex;
+            background: rgb(60, 62, 68);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .section_img {
+            float: left;
+            width: 220px;
+            height: 220px;
+        }
+
+        .section_img img {
+            width: 220px;
+            height: 220px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .section_info {
+            float: right;
+            width: 353px;
+            height: 193px;
+        }
+
+        .section:first-child {
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+        }
+
+        .section:first-child a h2 {
+            margin-top: 0;
+        }
+
+        .section:last-child {
+            -webkit-box-pack: end;
+            justify-content: flex-end;
+        }
+
+        .section {
+            padding: 13.5px;
+        }
+
+        .text_white {
+            color: white;
+        }
+
+        .section a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            color: orange;
+            text-decoration: none;
+        }
+
+        .status {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            text-transform: capitalize;
+        }
+
+        .status_icon {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            margin-right: 0.375rem;
+            /*background: rgb(85, 204, 68);*/
+            border-radius: 50%;
+        }
+
+        .text_gray {
+            color: rgb(158, 158, 158);
+        }
+
+        /*
+        Конец блока с настройками стилей section_card
+        -----------------------------------
+        */
+
+    /*
+    Конец блока с настройками стилей wrapper
+    -----------------------------------
+    */
+
+    /*
+    -----------------------------------
+    Блок с настройками стилей block_with_button
+    */
+
+    .block_with_button {
+        margin: 0 auto;
+        width: 1300px;
+    }
+
+    .block_with_button ul {
+        width: 250px;
+        height: 50px;
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+        line-height: 50px;
+    }
+
+    .block_with_button ul li {
+        display: inline-block;
+        margin-right: 35px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .block_with_button ul li a {
+        text-decoration: none;
+        color: rgb(158, 158, 158);
+    }
+
+    .block_with_button ul li a:hover {
+        color: rgb(252, 252, 252);
+    }
+
+    /*
+    Конец блока с настройками стилей block_with_button
+    -----------------------------------
+    */
+
+    /*
+    -----------------------------------
+    Блок с настройками стилей wrapper_character
+    */
+
+    .wrapper_character {
+        margin: 0 auto;
+        width: 1300px;
+        display: flex;
+    }
+
+    .character_image {
+        float: left;
+    }
+
+    .character_image img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .character_info {
+        border: 1px solid rgb(32, 35, 41);
+        border-radius: 0.5rem;
+        margin-left: 15px;
+        background: rgb(54, 60, 71);
+        min-width: 300px;
+    }
+
+    .character_name {
+        margin-top: 0px;
+        color: white;
+    }
+
+    .episode_separator{
+        color: rgb(39, 43, 51);
+        border-color: rgb(39, 43, 51);
+    }
+
+    /*
+    Конец блока с настройками стилей wrapper_character
+    -----------------------------------
+    */
+
+/*
+Конец блока с настройками стилей content
+-----------------------------------
+*/
+
+/*
+-----------------------------------
+Блок с настройками стилей footer
+*/
+
+.footer {
+    background: rgb(32, 35, 41);
+    width: 100%;
+    padding: 4.5rem 0px;
+}
+
+.footer ul {
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    line-height: 50px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+}
+
+.footer ul li a:hover {
+    color: rgb(252, 252, 252);
+}
+
+/*
+Конец блока с настройками стилей footer
+-----------------------------------
+*/
